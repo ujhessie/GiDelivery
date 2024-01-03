@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+
+@mixin bp_mobile() {
+    @media (max-width:$bp_mobile) {
+        @content
+    }
+}
+
+@mixin bp_tablet() {
+    @media (max-width:$bp_tablet) {
+        @content
+    }
+}

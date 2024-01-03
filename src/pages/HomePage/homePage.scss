@@ -1,0 +1,279 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.div-home {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+  aside {
+    height: 100vh;
+    width: 100%;
+    background-color: $color_red;
+    display: flex;
+    justify-content: center;
+    background-image: url("/background_aside.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .container-aside {
+      background-color: $color_red_3;
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+
+      .content-aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+
+        h1 {
+          line-height: 130%;
+          color: $color_font_white;
+          font-size: 40px;
+          margin-bottom: 20px;
+        }
+        p {
+          font-weight: 600;
+          color: $color_font_white;
+          opacity: 0.8;
+        }
+      }
+    }
+
+    @include bp_tablet {
+      display: none;
+    }
+  }
+
+  @include bp_tablet {
+    aside {
+      display: none;
+    }
+
+    grid-template-columns: 1fr;
+    .container {
+      margin: 0 auto;
+      padding: 10px;
+      margin: 0;
+
+      .div-content {
+        .header {
+          .logo,
+          .cart,
+          .item-nav {
+            color: $color_font_white;
+          }
+        }
+
+        background-color: $color_red;
+
+        background-size: cover;
+        background-position: center;
+
+        padding: 30px;
+        border-radius: 10px 10px 30px 30px;
+
+        h2,
+        li {
+          color: $color_font_white;
+        }
+
+        .button_home {
+          border: 2px solid $color_font_white;
+        }
+      }
+    }
+
+    text-align: center;
+
+    .back {
+      display: none;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+}
+
+// componentes internos de HomePage
+
+
+.times {
+  margin-bottom: 10px;
+  @include bp_tablet {
+    margin: 50px 0 20px 0;
+  }
+  span {
+    background-color: $color_red_2;
+    padding: 10px;
+    display: inline-block;
+    color: $color_red;
+    font-weight: 600;
+    opacity: 0.8;
+
+    @include bp_tablet {
+      color: $color_font_white;
+      background-color: rgba(255, 255, 255, 0.178);
+    }
+
+    .icon {
+      transform: translateY(2px);
+    }
+  }
+}
+
+.div-button {
+  position: relative;
+  .button_home {
+    background-color: $color_font_red;
+    color: $color_font_white;
+    padding: 10px 20px;
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    z-index: 200;
+
+    @include bp_tablet() {
+      border: 2px solid $color_font_white;
+      transition: 200ms ease-in-out;
+      
+      font-size: 1.2rem;
+      &:hover {
+        background-color: $color_font_white;
+        color: $color_font_black;
+      }
+    }
+  }
+
+  .back {
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 80px;
+    height: 40px;
+    background-color: $color_yellow;
+  }
+}
+.pagamentos {
+  display: flex;
+  gap: 30px;
+  color: $color_font_black;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-bottom: 20px;
+
+  @include bp_tablet {
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    color: $color_font_white;
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+}
+
+.botao_opcoes {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  span {
+    display: inline-block;
+    font-weight: $color_font_black;
+    font-weight: 600;
+    opacity: 0.8;
+    
+  }
+
+  @include bp_tablet {
+    color: $color_font_white;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+  }
+}
+
+.texto {
+  font-weight: 600;
+  color: $color_font_black;
+  opacity: 0.8;
+  line-height: 160%;
+  margin-bottom: 20px;
+
+  @include bp_tablet {
+    color: $color_font_white;
+    margin-top: 30px;
+    opacity: 0.6;
+  }
+}
+
+h2 {
+  color: $color_font_black;
+  line-height: 130%;
+  margin-bottom: 20px;
+  
+
+  @include bp_tablet() {
+    color: $color_font_white;
+  }
+}
+
+.div-footer-home {
+  font-weight: 600;
+  color: $color_font_black;
+  display: flex;
+  justify-content: space-between;
+
+  @include bp_tablet {
+    color: $color_font_white;
+  }
+}
+// componentes internos de HomePage
+
+#main-home {
+  height: 100vh;
+  @include bp_tablet {
+    padding: 5px;
+  }
+
+  .container {
+    height: 100%;
+
+    @include bp_tablet {
+      background-color: $color_red;
+      border-radius: 10px;
+
+      .header {
+        a {
+          color: $color_font_white;
+        }
+      }
+    }
+
+    .content {
+      padding: 10px;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+
+    
+
+      // .header {}
+
+      .conteudo {
+      }
+      .footer {
+      }
+    }
+  }
+}

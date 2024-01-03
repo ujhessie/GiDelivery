@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+        display: flex; 
+        gap: 10px;
+
+        .item-nav {
+            font-weight: 600; 
+            color: $color_font_black;
+            opacity: 0.8;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .logo {
+        font-weight: 600;
+        text-transform: uppercase;
+        color: $color_font_black;
+        opacity: 0.8;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .cart {
+        color: $color_font_black;
+        font-weight: 600;
+
+        
+        .icon {
+            font-size: 20px;
+            transform: translateY(2px);
+        }
+    }
+}
