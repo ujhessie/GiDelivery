@@ -1,0 +1,10 @@
+@import "../../styles/variables.scss";
+
+#timesTop {
+    text-align: center;
+    font-weight: 600;
+    opacity: 0.8;
+    color: $color_font_white;
+    background-color: $color_red;
+    padding: 10px;
+}

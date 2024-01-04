@@ -16,12 +16,13 @@
   width: 100%;
   max-width: $bp_tablet;
   margin: 0 auto;
-  padding: 32px 40px;
+  
 
   @include bp_tablet {
     max-width: 100%;
-      
+    padding: 0;
   }
+
 }
 
 h2 {
