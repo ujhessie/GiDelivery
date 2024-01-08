@@ -1,0 +1,98 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+// Componentes internos
+.cardProdutoCarrinho {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  .divImg {
+    width: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      margin: 0;
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  }
+
+  .divInformacoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .nomeProduto, .nomeProduto {
+      font-weight: 600;
+      color: $color_font_black;
+      
+    }
+
+    .valorProduto {
+      font-size: 14px;
+      font-weight: 600;
+      color: $color_font_black;
+      opacity: 0.8;
+    }
+
+    .removerProduto {
+      font-weight: 600;
+      color: $color_font_red;
+      text-decoration: underline;
+      opacity: 0.8;
+      font-size: 14px;
+      display: inline;
+      margin-right: 16px;
+    }
+
+    .divQuantidadeProduto {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+
+      input {
+        width: 40px;
+        font-weight: 600;
+        color: $color_font_black;
+        text-align: center;
+        padding: 10px;
+      }
+
+      button {
+        color: $color_font_black;
+        padding: 4px 20px;
+        border-radius: 4px;
+        font-weight: 600;
+        color: $color_font_black;
+        background-color: transparent;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}
+// Componentes internos
+
+#mainCart {
+  h2 {
+    color: $color_font_black;
+    text-align: center;
+  }
+}
+
+
+.listaProdutos {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  @include bp_mobile {
+    grid-template-columns: 1fr;
+  }
+}

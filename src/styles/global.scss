@@ -17,7 +17,11 @@
   max-width: $bp_tablet;
   margin: 0 auto;
   
+  main {
+    padding: 10px;
+  }
 
+  
   @include bp_tablet {
     max-width: 100%;
     padding: 0;
@@ -28,6 +32,8 @@
 h2 {
   font-size: 40px;
   line-height: 130%;
+
+
 
   @include bp_tablet {
     font-size: 32px;
