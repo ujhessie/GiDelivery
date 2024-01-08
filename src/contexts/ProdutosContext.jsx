@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // ProdutosContext.js
 import { createContext, useState, useContext } from "react";
 
@@ -48,6 +49,7 @@ export const ProdutosContext = createContext();
 
 // Componente Provedor de Produtos
 export const ProdutosProvider = ({ children }) => {
+  // eslint-disable-next-line no-unused-vars
   const [produtos, setProdutos] = useState(produtosSimulados);
 
   return (
