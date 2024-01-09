@@ -1,4 +1,5 @@
 import "./cartPage.scss";
+import { Link } from "react-router-dom";
 
 import Header from "../../components/Header/Header";
 import TimesTop from "../../components/TimesTop/TimesTop";
@@ -25,9 +26,9 @@ const CartPage = () => {
         <div className="botoesETotal">
           <p className="total">Total: R$ {total.toFixed(2)} </p>
           <div className="divBotoes">
-            <a href="#" className="continuarCompra" >
+            <Link to={"/menu"} className="continuarCompra" >
               Continuar comprando
-            </a>
+            </ Link>
             <a href="#" className="finalizarCompra" >
               Finalizar compra
             </a>

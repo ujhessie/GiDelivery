@@ -32,14 +32,6 @@ const CardProdutoCarrinho = ({ produto }) => {
     calcularTotal();
   };
 
-  const handleInputChange = (event) => {
-    const novaQuantidade = parseInt(event.target.value);
-    if (!isNaN(novaQuantidade) && novaQuantidade >= 0) {
-      setQuantidade(novaQuantidade);
-      atualizarQuantidade(produto.id, novaQuantidade);
-      calcularTotal();
-    }
-  };
 
   return (
     <div className="cardProdutoCarrinho">

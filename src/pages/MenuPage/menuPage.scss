@@ -61,7 +61,7 @@
   .containerProdutos {
     .produtos {
       display: grid;
-      gap: 24px 16px;
+      gap: 16px 8px;
       grid-template-columns: repeat(3, 1fr);
 
       @include bp_mobile() {

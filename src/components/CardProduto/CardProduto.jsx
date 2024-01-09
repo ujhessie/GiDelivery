@@ -2,7 +2,8 @@
 import "./cardProduto.scss";
 
 import { useProdutos } from "../../contexts/ProdutosContext";
-import { useCarrinho } from '../../contexts/CarrinhoContext';
+import { useCarrinho } from "../../contexts/CarrinhoContext";
+import { IoMdAdd } from "react-icons/io";
 
 const CardProduto = ({ id }) => {
   const { produtos } = useProdutos();
@@ -32,7 +33,7 @@ const CardProduto = ({ id }) => {
         <div className="divValorAndBotao">
           <span className="valor">R$ {produto.preco.toFixed(2)}</span>
           <button onClick={handleAdicionarAoCarrinho}>
-            Adicionar ao Carrinho
+            <IoMdAdd  className="icon" />
           </button>
         </div>
       </div>
