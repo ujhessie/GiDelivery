@@ -22,18 +22,21 @@ export const CarrinhoProvider = ({ children }) => {
 
   const adicionarItem = (novoItem) => {
     const itemExistente = carrinho.find((item) => item.id === novoItem.id);
-
+  
     if (itemExistente) {
       const novoCarrinho = carrinho.map((item) =>
-        item.id === novoItem.id ? { ...item, quantidade: item.quantidade + 1 } : item
+        item.id === novoItem.id
+          ? { ...item, quantidade: item.quantidade + novoItem.quantidade } // Adiciona a nova quantidade à existente
+          : item
       );
       setCarrinho(novoCarrinho);
     } else {
-      setCarrinho([...carrinho, { ...novoItem, quantidade: 1 }]);
+      setCarrinho([...carrinho, { ...novoItem, quantidade: novoItem.quantidade }]);
     }
-
-    calcularTotal();  
+  
+    calcularTotal();
   };
+  
 
   const removerItem = (id) => {
     const novoCarrinho = carrinho.filter((item) => item.id !== id);
