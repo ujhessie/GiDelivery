@@ -1,0 +1,151 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+#main_home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  text-align: center;
+
+  .content {
+    width: 100%;
+    max-width: $bp_tablet;
+    margin: 0 auto;
+    padding: 8px;
+    h1 {
+      color: $color_font_black;
+      // line-height: 160%;
+      font-size: 52px;
+      // text-transform: uppercase;
+      font-weight: 800;
+      font-family: $fonte_titulos;
+      margin-bottom: 16px;
+      
+
+      @include bp_tablet {
+        font-size: 48px;
+
+      }
+
+      @include bp_mobile {
+        font-size: 44px;
+      }
+      span {
+        font-family: $fonte_titulos;
+        // background-color: $cor_laranja;
+        border-radius: 4px;
+        // color: $color_font_white;
+        color: $cor_laranja;
+        padding: 4px;
+      }
+    }
+    .subtitulo {
+      color: $color_font_black;
+      opacity: 0.8;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    .botoes {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 32px;
+      .botao {
+        display: block;
+        margin: 0;
+        padding: 16px;
+        font-weight: 600;
+        border-radius: 4px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: 200ms ease-in-out;
+        
+        &:hover {
+          scale: 1.02;
+          
+        }
+        p {
+          margin: 0;
+        }
+
+        .icon {
+          font-size: 26px;
+          transform: translateY(-2px);
+        }
+
+      &.b1 {
+        background-color: $cor_laranja;
+        color: $color_font_white;
+        &:hover {
+          scale: 1.02;
+         background-color: transparent;
+         color: $color_font_black; 
+        }
+       } 
+       &.b2 {
+        color: $color_font_black;
+       }
+      }
+    }
+
+    .desenvolvedor {
+      font-weight: 600;
+      opacity: 0.8;
+      color: $color_font_black;
+      
+      a {
+        text-decoration: underline;
+        color: $color_font_black;
+        transition: 200ms ease-in-out;
+
+        .icon {
+          transform: translateY(2px);
+        }
+
+        &:hover {
+          color: $cor_laranja;
+        }
+      }
+    }
+  }
+}
+
+.horarios {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  // color: $color_font_white;
+
+  .content_horarios {
+    // background-color: $cor_laranja;
+    color: $color_font_black;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: 400;
+    // padding: 8px 16px;
+    border: 1px solid $color_font_black;
+    border-radius: 4px;
+    // opacity: 0.8;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+      margin: 0;
+      display: inline-block;
+    
+    }
+    .icon {
+      transform: translateY(-1px);
+      font-size: 1.3rem;
+    }
+  }
+
+  @include bp_mobile {
+  }
+}

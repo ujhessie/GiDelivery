@@ -1,0 +1,54 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+#aside_home {
+  background-color: $cor_laranja;
+  height: 100vh;
+  border-radius: 0 48px 48px 0 ;
+
+  @include bp_tablet {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // align-items: ;
+    height: 100%;
+    padding: 30px;
+
+    .content {
+      h2 {
+        line-height: 130%;
+        font-size: 3rem;
+        color: $cor_branco_alaranjado;
+        margin-bottom: 16px;
+      }
+
+      p {
+        color: $cor_branco_alaranjado;
+        font-weight: 600;
+        opacity: 0.8;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      .div_botoes {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        a {
+          display: block;
+          font-weight: 600;
+          text-align: center;
+          color: $cor_branco_alaranjado;
+          border: 2px solid $cor_branco_alaranjado;
+          padding: 16px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}

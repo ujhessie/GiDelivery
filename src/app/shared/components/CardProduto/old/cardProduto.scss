@@ -1,0 +1,96 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.cardProduto {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  .divImg {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    img {
+      display: flex;
+      width: 100%;
+      object-fit: cover;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      aspect-ratio: 1/1;
+      transition: 200ms ease-in-out;
+    }
+  }
+
+  .nomeProduto {
+    font-weight: 600;
+    color: $color_font_black;
+    margin-bottom: 4px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Define o número de linhas desejado */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .descricaoProduto {
+    font-weight: 400;
+    font-size: 12px;
+    color: $color_font_black;
+    opacity: 0.8;
+    margin-bottom: 4px;
+    line-height: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Define o número de linhas desejado */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+
+    
+  }
+
+  .divValorAndBotao {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    .valor {
+      font-weight: 600;
+      font-size: 16px;
+      color: $color_font_black;
+    }
+
+    button {
+      background-color: $cor_laranja;
+      padding: 10px;
+      font-weight: 600;
+      color: $color_font_white;
+      cursor: pointer;
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+      height: 30px;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &:hover {
+    img {
+      scale: 1.1;
+    }
+  }
+}
