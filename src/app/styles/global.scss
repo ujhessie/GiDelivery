@@ -1,0 +1,59 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
+}
+
+// Classes tailwind
+.custom-h1 {
+  @apply text-5xl md:text-6xl  lg:text-7xl font-[700];
+}
+
+.custom-h2 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-[700] text-preto-primario;
+}
+
+.my-transition {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.custom-p {
+  @apply text-[16px] md:text-[18px] lg:text-[20px] ;
+}
+
+.clamp-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Número máximo de linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse {
+  animation: scaleUp 200ms infinite ease-in;
+}
