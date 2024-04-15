@@ -17,11 +17,13 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.21.1",
-    "sass": "^1.69.3"
+    "sass": "^1.69.3",
+    "scrollreveal": "^4.0.9"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
+    "@types/scrollreveal": "^0.0.11",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.45.0",

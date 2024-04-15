@@ -1,4 +1,6 @@
 import { useProdutos } from "../../contexts/ProdutosContext";
+import ScrollReveal from "scrollreveal";
+import { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -44,8 +46,17 @@ export const CardProduto: React.FC<ICardProduto> = ({ id }) => {
     </div>
   );
 
+  useEffect(() => {
+    ScrollReveal().reveal(".my-element", {
+      delay: 500,
+      distance: "50px",
+      origin: "bottom",
+      easing: "ease-out",
+      reset: true
+    });
+  }, []);
   return (
-    <div className='card p-4 shadow-md hover:shadow-xl my-transition rounded-xl text-preto-pimario hover:scale-105 bg-white relative h-[200p] w-full block hover:z-10 '>
+    <div className='card p-4 shadow-md hover:shadow-xl my-transition my-element  rounded-xl text-preto-pimario hover:scale-105 bg-white relative h-[200p] w-full block hover:z-10 '>
       <Link
         to={`/produto/${produto.id}`}
         className='content h-full flex flex-col justify-between w-full'
