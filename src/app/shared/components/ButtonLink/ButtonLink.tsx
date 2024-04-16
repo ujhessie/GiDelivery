@@ -6,6 +6,7 @@ interface IButtonLinkProps {
   variacao?: "primario" | "secudario" | "terciario";
   tamanho?: "pequeno" | "medio" | "grande";
   icon?: React.ReactNode;
+  className?: string;
 }
 
 export const ButtonLink: React.FC<IButtonLinkProps> = ({
@@ -14,6 +15,7 @@ export const ButtonLink: React.FC<IButtonLinkProps> = ({
   variacao = "primario",
   tamanho = "medio",
   icon,
+  className,
 }) => {
   let tiposVariacao: string =
     "border-vermelho-primario bg-vermelho-primario text-white";
@@ -43,7 +45,7 @@ export const ButtonLink: React.FC<IButtonLinkProps> = ({
   return (
     <Link
       to={rota}
-      className={`shadow-md inline-flex rounded-full border-2 border-solid items-center gap-2 ${tamanhosVariacoes} ${tiposVariacao}`}
+      className={`shadow-md inline-flex rounded-full border-2 border-solid items-center gap-2 ${tamanhosVariacoes} ${tiposVariacao} ${className}`}
     >
       <p className='inline-block w-full text-center'>{children}</p>
       {icon ? <div className='text-xl'>{icon}</div> : null}
