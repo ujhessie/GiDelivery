@@ -1,3 +1,3 @@
-# GiDelivery
-Sistema de lanchonete integrado com Google Sheet
-# GiDelivery
+Titulo do projeto
+
+status do projeto (Em desenvolvimento)
