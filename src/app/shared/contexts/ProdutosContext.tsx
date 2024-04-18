@@ -26,7 +26,7 @@ interface IProdutosProviderProps {
 const produtosSimulados: IprodutosSimulados[] = [
   {
     id: 1,
-    nome: "Hambúrguer Tradicional (Teste de tamanho de frase)",
+    nome: "Hambúrguer Tradicional",
     valor: 9.99,
     categoria: "hamburguer",
     imgUrl:
