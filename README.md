@@ -26,7 +26,7 @@ npm run dev
 
 <hr>
 
-### 🔨 Guia de uso
+
 
 Para aditar o cardápio você pode navegar até o contexto de produtos e adicionar ou remover os produtos que deseja:
 
@@ -57,12 +57,12 @@ Coloque exemplos
 
 ## 📦 Tecnologias usadas:
 
-Coloque aqui as ferramentas que você usou para criar seu projeto, exemplo:
+
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)
+<!-- ![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white) -->
 
 
 <!-- * Link para pegar as badges: https://github.com/Ileriayo/markdown-badges -->
@@ -99,7 +99,7 @@ Resposta 1
 
 #### Questão 2
 
-Resposta 2 --> -->
+Resposta 2 --> 
 
 ## 💡 Considerações
 
