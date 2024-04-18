@@ -12,7 +12,7 @@ export const ButtonVoltar: React.FC<IButtonVoltar> = ({ className }) => {
   return (
     <Link
       to='/menu'
-      className={`p-5 bg-vermelho-primario border-solid border-4 border-white absolute  aspect-square rounded-full   text-white ${className}`}
+      className={`p-2 bg-white border-solid border-4 border-white absolute top-0 right-0  aspect-square rounded-full   text-vermelho-primario text-5xl ${className}`}
     >
       <CgClose />
     </Link>

@@ -7,6 +7,7 @@ interface IButtonLinkProps {
   tamanho?: "pequeno" | "medio" | "grande";
   icon?: React.ReactNode;
   className?: string;
+  abrirEmNovaAba?: boolean; // Nova propriedade para controlar se deve abrir em nova aba
 }
 
 export const ButtonLink: React.FC<IButtonLinkProps> = ({
@@ -16,6 +17,7 @@ export const ButtonLink: React.FC<IButtonLinkProps> = ({
   tamanho = "medio",
   icon,
   className,
+  abrirEmNovaAba = false, // Valor padrão para não abrir em nova aba
 }) => {
   let tiposVariacao: string =
     "border-vermelho-primario bg-vermelho-primario text-white";
@@ -42,7 +44,7 @@ export const ButtonLink: React.FC<IButtonLinkProps> = ({
     tamanhosVariacoes = "py-[16px] px-[40px] font-bold custom-p ";
   }
 
-  return (
+  const linkComponent = (
     <Link
       to={rota}
       className={`shadow-md inline-flex rounded-full border-2 border-solid items-center gap-2 ${tamanhosVariacoes} ${tiposVariacao} ${className}`}
@@ -50,5 +52,13 @@ export const ButtonLink: React.FC<IButtonLinkProps> = ({
       <p className='inline-block w-full text-center'>{children}</p>
       {icon ? <div className='text-xl'>{icon}</div> : null}
     </Link>
+  );
+
+  return abrirEmNovaAba ? (
+    <a href={rota} target="_blank" rel="noopener noreferrer" className={className}>
+      {linkComponent}
+    </a>
+  ) : (
+    linkComponent
   );
 };

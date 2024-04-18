@@ -3,6 +3,7 @@ import { Header } from "../../shared/components/Header/Header";
 import { CardProdutoCarrinho } from "./components/CardProdutoCarrinho";
 import { useCarrinho } from "../../shared/contexts/CarrinhoContext";
 import { ButtonLink } from "../../shared/components/ButtonLink/ButtonLink";
+import { MyContainer } from "./../../shared/components/MyContainer/MyContainer";
 
 export const CartPage = () => {
   const { carrinho, total } = useCarrinho();
@@ -27,7 +28,31 @@ export const CartPage = () => {
   return (
     <>
       <Header />
-      <section className='flex flex-col items-center'>
+      <MyContainer className='mt-[20px]'>
+        <div className='divflex grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <div className='lg:col-span-2 gap-4  '>
+            <h2 className='custom-h2 text-center mb-[20px]'>
+              Aqui estão seus itens
+            </h2>
+            <div className='produtos grid lg:grid-cols-2'>
+              {carrinho.map((item) => (
+                <CardProdutoCarrinho key={item.id} id={item.id} />
+              ))}
+            </div>
+          </div>
+          <aside className='bg col-span-1 rounded-md p-4 shadow-md'>
+            <div className='bg-branco aspect-[4/3] rounded-md mb-4'></div>
+            <p className='custom-p text-center font-medium mb-2'>
+              Total: R$ {total.toFixed(2)}
+            </p>
+            <div className='div-botoes  flex flex-col gap-4 md:flex-row md:justify-between'>
+              <ButtonLink className='inline-block' rota='/menu' variacao='secudario'>Voltar</ButtonLink>
+              <ButtonLink abrirEmNovaAba={true}  className='inline-block' rota={linkWhatsApp}>Finalizar compra</ButtonLink>
+            </div>
+          </aside>
+        </div>
+      </MyContainer>
+      {/* <section className='flex flex-col items-center'>
         <div className='content max-w-screen-md w-full px-2'>
           <p className='text-center mt-8 text-vermelho-0 font-semibold'>
             Aproveite
@@ -59,8 +84,7 @@ export const CartPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
-

@@ -51,10 +51,11 @@ export const CardProduto: React.FC<ICardProduto> = ({ id }) => {
       delay: 500,
       distance: "50px",
       origin: "bottom",
-      easing: "ease-out",
+      easing: "ease-in-out",
       reset: true
     });
   }, []);
+
   return (
     <div className='card p-4 shadow-md hover:shadow-xl my-transition my-element  rounded-xl text-preto-pimario hover:scale-105 bg-white relative h-[200p] w-full block hover:z-10 '>
       <Link

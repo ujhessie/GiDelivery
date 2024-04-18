@@ -1,26 +1,21 @@
 import { useProdutos } from "../../shared/contexts/ProdutosContext";
-// import { useCarrinho } from "../../shared/contexts/CarrinhoContext";
-
 import { MyContainer } from "../../shared/components/MyContainer/MyContainer";
 import { Categorias } from "./components/Categorias";
 import { CardProduto } from "../../shared/components/CardProduto/CardProduto";
 import { Header } from "../../shared/components/Header/Header";
 import Footer from "../../shared/components/Footer/Footer";
 import { CardsAnuncios } from "../../shared/components/CardsAnuncios/CardsAnuncios";
+import { AvisosTop } from '../../shared/components/AvisosTop/AvisosTop';
 
 export const MenuPage = () => {
   const produtos = useProdutos();
-  // const { carrinho, total } = useCarrinho();
-
-  // const SecAnuncios = () => (
-
-  // )
 
   return (
     <>
       <Header />
+      <AvisosTop/>
+     
       <MyContainer>
-
         <div className='mt-[20px]'>
           <CardsAnuncios />
         </div>
@@ -38,7 +33,6 @@ export const MenuPage = () => {
         <section>
           <Footer />
         </section>
-
       </MyContainer>
     </>
   );

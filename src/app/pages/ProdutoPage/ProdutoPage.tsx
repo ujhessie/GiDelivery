@@ -8,7 +8,7 @@ import { ButtonLink } from "../../shared/components/ButtonLink/ButtonLink";
 
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
 import { ButtonVoltar } from "./components/ButtonVoltar";
-import App from "./../../App";
+import { AvisosTop } from "../../shared/components/AvisosTop/AvisosTop";
 
 export const ProdutoPage = () => {
   const { id } = useParams();
@@ -40,10 +40,37 @@ export const ProdutoPage = () => {
     imgUrl: produto.imgUrl,
   };
 
+  // const handleClick = () => {
+  //   // Remover a classe 'avisoAtivo' imediatamente
+  //   document.getElementById("avisoProduto")?.classList.remove("avisoAtivo");
+
+  //   // Adicionar a classe 'avisoAtivo' após 1 segundo
+  //   setTimeout(() => {
+     
+  //     document.getElementById("avisoProduto")?.classList.add("avisoAtivo");
+  //   }, 1000); // 1000 milissegundos = 1 segundo
+  //   adicionarItem(novoItem);
+  //   setQuantidade(1);
+  // };
+
+
   const handleClick = () => {
+    // Remover a classe 'avisoAtivo' imediatamente
+    document.getElementById("avisoProduto")?.classList.remove("avisoAtivo");
+
+    // Adicionar a classe 'avisoAtivo' após 1 segundo
+    setTimeout(() => {
+        const avisoProduto = document.getElementById("avisoProduto");
+        if (avisoProduto) {
+            avisoProduto.innerHTML = `${produto.nome} adicionado(a) a sacola`;
+            avisoProduto.classList.add("avisoAtivo");
+        }
+    }, 1000); // 1000 milissegundos = 1 segundo
+
     adicionarItem(novoItem);
     setQuantidade(1);
-  };
+};
+
 
   const DivImg = () => {
     return (
@@ -87,11 +114,7 @@ export const ProdutoPage = () => {
         >
           <IoMdRemove />
         </button>
-        <p
-          className='font-medium text-preto-primario'
-        >
-          {quantidade}
-        </p>
+        <p className='font-medium text-preto-primario'>{quantidade}</p>
         <button
           className='text-preto-primario'
           onClick={handleAumentarQuantdade}
@@ -105,7 +128,10 @@ export const ProdutoPage = () => {
   const BotaoAdicionar = () => {
     return (
       <div className='botaoAdicionar' onClick={handleClick}>
-        <ButtonLink className='bg-vermelho-primario border-2 border-vermelho-primario border-solid py-3 px-4  rounded-full text-white w-full md:auto'>
+        <ButtonLink
+          rota='/menu'
+          className='bg-vermelho-primario border-2 border-vermelho-primario border-solid py-3 px-4  rounded-full text-white w-full md:auto'
+        >
           Adicionar a sacola
         </ButtonLink>
       </div>
@@ -115,10 +141,12 @@ export const ProdutoPage = () => {
   return (
     <>
       <Header />
+      <AvisosTop />
 
-      <MyContainer className='mt-[20px]'>
-        <div className='rounded-xl overflow-hidden p-4 shadow-xl grid md:grid-cols-2 gap-4'>
+      <MyContainer className='mt-[20px] relative'>
+        <div className='rounded-xl overflow-hidden p-4 relative shadow-xl grid md:grid-cols-2 gap-4'>
           <DivImg />
+
           <div className='bottom'>
             <Informacoes />
             <Valor />
@@ -128,6 +156,8 @@ export const ProdutoPage = () => {
             </div>
           </div>
         </div>
+
+        <ButtonVoltar />
       </MyContainer>
     </>
   );
